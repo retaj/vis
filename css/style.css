@@ -1,0 +1,50 @@
+body {
+  background: #444444;
+  font-family: verdana, arial, sans-serif;
+  color: #444444;
+  font-size: 12px;
+  margin: 0px;
+}
+
+div#container {
+  width: 1000px;
+  margin: 0px auto;
+  background: #FFFFFF;
+  padding: 0px;
+}
+
+div#content {
+  width: 1000px;
+  height: 600px;
+  padding-top: 100px;
+  background: #FFFFFF;
+}
+
+div#header {
+  width: 1000px;
+  height: 50px;
+  background: #888888;
+  position: absolute;
+  top: 0px;
+}
+
+div#nav {
+  width: 400px;
+  height: 580px;
+  float: left;
+  margin: 5px auto;
+  background: #FFFFFF;
+}
+
+div#maincontent {
+  width: 600px;
+  height: 580px;
+  float: right;
+  margin: 5px auto;
+  background: #DDDDDD;
+}
+
+/* .clearfix:after {content:"."; display:block; height:0; clear:both; visibility:hidden;}
+.clearfix {display:inline-block;}
+/* Hide from IE Mac \*/
+/* .clearfix {display:block;} */ */
