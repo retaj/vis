@@ -1,20 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>herpity derpity</title>
-        <!-- <script type="text/javascript" src="d3/d3.v3.js"></script> -->
-        <style type="text/css">
+<html>
 
-        </style>
-    </head>
-    <body>
-      <h2>tu trpaj</h2>
-        <form action="./cgi-bin/helloPM.cgi" method="POST" target="_blank">
-          <textarea name="textcontent" cols=40 rows=4>
-            Paste data...
-          </textarea>
-          <input type="submit" value="Submit">
-        </form>
-    </body>
+  <head>
+    <title>test</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/d3/d3.v3.min.js"></script>
+    <script type="text/javascript" src="js/plotmachen.js"></script>
+    
+  </head>
+  
+  <body>
+    <div id="container">
+      <div id="content" class="clearfix">
+        <div id="nav">
+            <h2>Ja sam input div.</h2>
+            <textarea name="textcontent" cols=40 rows=20 id='txt2'></textarea>
+            <!-- <input name="textbox1" type="text" id="txt1"/> -->
+            <input name="buttonExecute" onclick="getInput(document.getElementById('txt2').value)" type="button" value="Submit" />
+            <!-- <input name="buttonExecute" onclick="execute(this)" type="button" value="Execute" /> -->
+
+        </div>
+        <div id="maincontent">
+            <h2>Ja sam output div.</h2>
+            
+        </div>
+      </div>
+      
+      <div id="header">
+        Ja sam header.
+      </div>
+    
+    </div>
+  </body>
 </html>

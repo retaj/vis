@@ -1,13 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<script type="text/javascript" src="d3/d3.v3.js"></script>
+<script language="Javascript">
 
-function getInput(data) {
-  //get separate rows
+function execute(data) {
+  <!-- var  nesto = "asdasdasd" -->
   var rows = data.split(/\r\n|\r|\n/g);
-  
+  <!-- var rows = "asdasd"; -->
+  alert(rows);
   var dataset = [];
-  
-  for (var i = 0; i < rows.length - 1; i++) {
+  for (var i = 0; i < 10; i++) {
     dataset[i] = []
-    
     elems = rows[i].split(" ");
     dataset[i][0] = elems[0];
     dataset[i][1] = elems[1];
@@ -17,7 +20,7 @@ function getInput(data) {
 }
 
 function makeSVG(dataset) {
-            // set width and height
+              // set width and height
             var w = 500;
             var h = 500;
             var barPadding = 1;
@@ -37,12 +40,12 @@ function makeSVG(dataset) {
                           ];*/
            
             // Create SVG element
-            var svg = d3.select("#maincontent")
+            var svg = d3.select("body")
                           .append("svg")
                           .attr("width", w)
                           .attr("height", h);
             
-            //points
+            //plotmachen
             svg.selectAll("circle")
                 .data(dataset)
                 .enter()
@@ -54,10 +57,9 @@ function makeSVG(dataset) {
                     return d[1];
                  })
                 .attr("r", function(d) {
-                    return 10;
+                    return Math.sqrt(h - d[1]);
                  });
-                 
-            //text
+                
             svg.selectAll("text")
                 .data(dataset)
                 .enter()
@@ -75,3 +77,22 @@ function makeSVG(dataset) {
                 .attr("font-size", "11px")
                 .attr("fill", "red");
 }
+
+
+</script>
+    <head>
+        <meta charset="utf-8">
+        <title>herpity derpity</title>
+        <!-- <script type="text/javascript" src="d3/d3.v3.js"></script> -->
+        <style type="text/css">
+        <!-- <script type="text/javascript" src="d3/d3.v3.js"></script> -->
+
+        </style>
+    </head>
+    <body>
+      <h2>tu trpaj</h2>
+          <textarea name="textcontent" cols=40 rows=4 id='txt2'>Paste data...</textarea>
+          <!-- <input name="textbox1" type="text" id="txt1"/> -->
+          <input name="buttonExecute" onclick="execute(document.getElementById('txt2').value)" type="button" value="Execute" />
+    </body>
+</html>
